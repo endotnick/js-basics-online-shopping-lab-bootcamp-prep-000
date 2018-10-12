@@ -48,6 +48,8 @@ function removeFromCart(item) {
     itemFound = cart[index].itemName === item;
     index++;
   } while(!itemFound);
+  console.log(index);
+  console.log(cart);
   cart.splice(index, 1);
 }
 
