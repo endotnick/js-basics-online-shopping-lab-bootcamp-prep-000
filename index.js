@@ -42,15 +42,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-  let index = 0;
-  let itemFound = false;
-  do {
-    itemFound = cart[index].itemName === item;
-    index++;
-  } while(!itemFound);
-  console.log(index);
-  console.log(cart);
-  cart.splice(index, 1);
+  cart.forEach(product => {
+    if(product.itemName === item) {
+      cart.splice(cart.indexOf(product), 1);
+      return cart;
+    }
+  });
 }
 
 function placeOrder(cardNumber) {
