@@ -42,12 +42,17 @@ function total() {
 }
 
 function removeFromCart(item) {
-  cart.forEach(product => {
+  try {
+    cart.forEach(product => {
     if(product.itemName === item) {
       cart.splice(cart.indexOf(product), 1);
       return cart;
     }
   });
+  }
+  catch {
+    return 'That item is not in your cart.';
+  }
 }
 
 function placeOrder(cardNumber) {
