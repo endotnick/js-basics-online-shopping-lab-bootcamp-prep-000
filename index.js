@@ -42,15 +42,13 @@ function total() {
 }
 
 function removeFromCart(item) {
-  try {
-    cart.forEach(product => {
+  const test = cart.forEach(product => {
     if(product.itemName === item) {
       cart.splice(cart.indexOf(product), 1);
       return cart;
     }
   });
-  }
-  catch {
+  if (!test) {
     return 'That item is not in your cart.';
   }
 }
