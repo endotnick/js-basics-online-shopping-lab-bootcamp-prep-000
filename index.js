@@ -27,7 +27,7 @@ function viewCart() {
       result += '.';
     }
   }
-  return ;
+  return result;
 }
 
 function total() {
