@@ -43,6 +43,9 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
+  const newCart = getCart();
+  delete newCart[item];
+  setCart(newCart);
 }
 
 function placeOrder(cardNumber) {
