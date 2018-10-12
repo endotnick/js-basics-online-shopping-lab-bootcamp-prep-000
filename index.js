@@ -19,7 +19,7 @@ function viewCart() {
   let result = cart.length > 0 ? 'In your cart, you have ' : 'Your shopping cart is empty.'
 
   for (let i = 0; i < cart.length; i++) {
-    result += `${cart[i.itemName]} at ${cart[i.itemPrice]}`;
+    result += `${cart[i].itemName} at ${cart[i].itemPrice}`;
     if (i < cart.length - 1) {
       result += ', and ';
     } else {
