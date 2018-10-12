@@ -22,7 +22,7 @@ function viewCart() {
     result += `${cart[i].itemName} at $${cart[i].itemPrice}`;
     if (i < cart.length - 1) {
       result += ', ';
-    } else if (i === cart.length - 1) {
+    } else if (i === cart.length - 2) {
       result += 'and ';
     } else {
       result += '.';
