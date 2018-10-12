@@ -42,7 +42,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-  delete cart[item];
+  let index = 0;
+  let itemFound = false;
+  do {
+    itemFound = cart[index].itemName === item;
+    index++;
+  } while(!itemFound);
 }
 
 function placeOrder(cardNumber) {
