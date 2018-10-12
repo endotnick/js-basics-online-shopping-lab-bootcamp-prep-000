@@ -21,7 +21,9 @@ function viewCart() {
   for (let i = 0; i < cart.length; i++) {
     result += `${cart[i].itemName} at $${cart[i].itemPrice}`;
     if (i < cart.length - 1) {
-      result += ', and ';
+      result += ', ';
+    } else if (i === cart.length - 1) {
+      result += 'and ';
     } else {
       result += '.';
     }
