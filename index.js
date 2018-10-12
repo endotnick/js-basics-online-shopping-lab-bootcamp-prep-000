@@ -23,7 +23,7 @@ function viewCart() {
     if (i < cart.length - 1) {
       result += ', ';
       if ( i === cart.length - 2) {
-        result += ' and ';
+        result += 'and ';
       }
     } else {
       result += '.';
