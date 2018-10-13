@@ -55,7 +55,7 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   // write your code here
-  const out = `Your total cost is ${total()}, which will be charged to the card ${cardNumber}.`
+  const out = `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
   setCart([]);
   return out;
 }
